@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CyberShield</title>
+  </head>
+  <body>
+    <h1>CyberShield Threat Detector</h1>
+
+    <form method="POST">
+      <textarea
+        name="message"
+        rows="4"
+        cols="50"
+        placeholder="Enter message to analyze..."
+      ></textarea>
+      <br />
+      <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    <p>Confidence: {{confidence}}%</p>
+    <p>Message analyzed: {{ message }}</p>
+    {% endif %}
+  </body>
+</html>
